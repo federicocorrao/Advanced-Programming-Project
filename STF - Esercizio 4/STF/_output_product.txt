@@ -1,0 +1,14 @@
+using STF;
+
+public class Product : ColumnFixture { 
+	public int x; 
+	public float y; 
+	public float result() { 
+		 /* Insert code here */ 
+	} 
+	public override bool Check(Row row) { 
+		this.x = (int)row[0]; 
+		this.y = (float)row[1]; 
+		return (result() == (float)row[2]);
+	}
+} 
